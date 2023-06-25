@@ -1,0 +1,43 @@
+This is a appointment booking system, including three parts：
+1. Database, its in database folder, and it using postgres, and setup with docker, you dont need to install postgres in you local, just run the docker using the instruction in database folder
+2. Backend, its in app folder, its nodejs and express based. you will need to install nodejs
+3. Frontend, ints in client folder, its in its react based, using the MUI. 
+
+
+steps to running this sytem in your local. 
+pre-requesites: 
+1. installation of docker: https://docs.docker.com/engine/install/
+2. installation of nodejs: https://nodejs.org/en/download
+
+step 1: 
+start your docker desktop instance in you local
+
+step 2: 
+open your terminal and goes to database folder of this project, and running command `docker compose up` to start the database, you should be able to see a message like
+
+```
+database-postgres-1  | 2023-06-24 20:37:53.545 UTC [29] LOG:  database system was shut down at 2023-06-24 20:37:51 UTC
+database-postgres-1  | 2023-06-24 20:37:53.585 UTC [1] LOG:  database system is ready to accept connection
+```
+
+step 3: 
+open a new terminnal, goes to root folder of this project
+if this your first time to running this project, run command `npm install` to install necessary packages. 
+after its done, run another command `npm start` to start the backend server, you should be able to see the last line
+```
+Drop and re-sync db.
+```
+
+
+
+step 4: 
+open a new terminal, goes to the client folder, 
+if this your first time to running this project, run command `npm install` to install necessary packages. 
+after its done, run another command `npm start` to start the frontend server, you should be able to see: 
+```
+You can now view react_dashboard in the browser.
+
+  Local:            http://localhost:8081
+  On Your Network:  http://10.0.0.17:8081
+```
+
